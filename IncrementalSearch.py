@@ -1,19 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
-'''
-Python code:
-Incremental search method
-'''
 """ An incremental search algorithm """
 import numpy as np
-
-
-# In[2]:
-
 
 def incremental_search(f, a, b, dx):
     """
@@ -48,7 +37,6 @@ def incremental_search(f, a, b, dx):
 
 
 # In[3]:
-
 
 y = lambda x: x**3 + 2.0*x**2 - 5
 
