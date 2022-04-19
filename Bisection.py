@@ -1,16 +1,11 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 """ The bisection method """
-
-
 def bisection(f, a, b, tol=0.1, maxiter=10):
     """
-    :param f: The function to solve
+    :param f: funcion
     :param a: The x-axis value where f(a)<0
     :param b: The x-axis value where f(b)>0
-    :param tol: The precision of the solution
-    :param maxiter: Maximum number of iterations
+    :param tol: tolerancia
+    :param maxiter: maximo numero de iteraciones
     :return: The x-axis value of the root,
                 number of iterations used
     """
@@ -34,8 +29,8 @@ def bisection(f, a, b, tol=0.1, maxiter=10):
 
 y = lambda x: x**3 + 2*x**2 - 5
 root, iterations = bisection(y, -5, 5, 0.00001, 100)
-print ("Root is:", root)
-print ("Iterations: ", iterations)
+print ("Raiz:", root)
+print ("Iteracion: ", iterations)
 
 
 
