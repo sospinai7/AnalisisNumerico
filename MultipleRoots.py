@@ -26,4 +26,4 @@ def multipleRoots(fx, x0, maxI, tol):
     else:
         return 'No converge'
 
-print(multipleRoots('x*2.71828182**(x)-2.71828182**(x)+1', 0.5, 10, 0.00001))
+print(multipleRoots('x*exp(x)-exp(x)+1', 0.5, 10, 0.00001))
