@@ -57,10 +57,10 @@ def incremental_search(exp, x0, delta, imax):
             # return (a + c)/2., n
             print('Iteration limit exceded')
 
-y = lambda x: x**3 + 2.0*x**2 - 5
+'''y = lambda x: x**3 + 2.0*x**2 - 5
 
 root, iterations = incremental_search(y, -5., 5., 0.001)
 
 print("Root is:", root)
-print("Iterations:", iterations)
+print("Iterations:", iterations)'''
 
