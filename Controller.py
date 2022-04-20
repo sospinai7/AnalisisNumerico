@@ -3,6 +3,7 @@ from unittest import result
 #from sympy import var
 #from sympy import sympify
 from FixedPoint import fixed_point
+from IncrementalSearch import incremental_search
 
 """
 x = var('x')
@@ -32,7 +33,8 @@ def opciones():
         delta = float(input())
         print('max limit of iterations: ', end="")
         imax = int(input())
-        #busquedasIn(exp, x0, delta, imax)
+        incremental_search(exp, x0, delta, imax)
+        
         
     elif num == '4':
         print('f(x): ', end="")
@@ -50,7 +52,7 @@ def opciones():
         fixed_point(exp, g_exp, x0, t_error, imax, tol)
 
 def main():
-    print('**** Presione el número del método a utilizar ****')
+    print('**** Type the method you want to use ****')
     opciones()
         
 if __name__ == "__main__":
