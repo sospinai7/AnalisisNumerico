@@ -1,5 +1,3 @@
-
-""" An incremental search algorithm """
 import numpy as np
 from sympy import var
 import customTools as ct
@@ -59,21 +57,10 @@ def incremental_search(exp, x0, delta, imax):
             # return (a + c)/2., n
             print('Iteration limit exceded')
 
+y = lambda x: x**3 + 2.0*x**2 - 5
 
-# In[3]:
+root, iterations = incremental_search(y, -5., 5., 0.001)
 
-# y = lambda x: x**3 + 2.0*x**2 - 5
-
-
-# In[4]:
-
-
-# root, iterations = incremental_search(y, -5., 5., 0.001)
-
-
-# In[8]:
-
-
-# print("Root is:", root)
-# print("Iterations:", iterations)
+print("Root is:", root)
+print("Iterations:", iterations)
 

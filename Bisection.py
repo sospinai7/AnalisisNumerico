@@ -1,4 +1,4 @@
-""" The bisection method """
+
 def bisection(f, a, b, tol=0.1, maxiter=10):
     """
     :param f: funcion
