@@ -1,12 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
-""" The Newton-Raphson method """
-
-
 def newton(f, df, x, tol=0.001, maxiter=100):
     """
     :param f: The function to solve
@@ -29,19 +20,8 @@ def newton(f, df, x, tol=0.001, maxiter=100):
 
     return None, n 
 
-
-# In[3]:
-
-
 y = lambda x: x**3 + 2*x**2 - 5
 dy = lambda x: 3*x**2 + 4*x
 root, iterations = newton(y, dy, 5.0, 0.00001, 100)
-print("Root is:", root)
-print("Iterations:", iterations)
-
-
-# In[ ]:
-
-
-
-
+print("La Raiz es: ", root)
+print("Iteracions: ", iterations)

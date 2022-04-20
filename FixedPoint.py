@@ -1,8 +1,3 @@
-""" 
-Python Code: Fixed Point
-An Fixed Point method implementation
-"""
-
 from sympy import var
 from sympy import sympify
 import customTools as ct

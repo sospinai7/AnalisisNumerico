@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-""" An incremental search algorithm """
 import numpy as np
 
 def incremental_search(f, a, b, dx):
@@ -35,20 +31,9 @@ def incremental_search(f, a, b, dx):
     else:
         return (a + c)/2., n
 
-
-# In[3]:
-
 y = lambda x: x**3 + 2.0*x**2 - 5
 
-
-# In[4]:
-
-
 root, iterations = incremental_search(y, -5., 5., 0.001)
-
-
-# In[8]:
-
 
 print("Root is:", root)
 print("Iterations:", iterations)
