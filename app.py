@@ -8,7 +8,15 @@ def hello():
 
 @app.route('/methods')
 def methods_route():
-    return render_template("nav/methods.html")
+    return render_template("Nav/methods.html")
+
+@app.route('/aboutUs')
+def about_us_route():
+    return render_template("Nav/about_us.html")
+
+@app.route('/help')
+def help_route():
+    return render_template("Nav/help.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
