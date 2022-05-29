@@ -1,0 +1,24 @@
+{% extends 'layout.html'%}
+{% block content %}
+
+<div class="containerhelp">
+	<div class="container_video">
+		<div class="container_info">
+		We know you can be a little confused about how to use our application, that's why we decided to create this video to help you navigate trough it and create a greater experience for you.
+		</div>
+		<div class="video">
+			<iframe width="852" height="480" src="https://www.youtube.com/embed/w6YjUeSoU30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="usermanual" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="container_pdf">
+		<div class="container_vi">
+		Also if you are not very close to the use of th Sympy format in python here is a PDF that will help you get more familiar with it.
+		</div>
+		<div class="pdf">
+			<embed src="./static/img/sympy_cheatsheet.pdf" type="application/pdf" class="pdf"></embed>
+		</div>
+	</div>
+	 
+</div>
+
+{% endblock %}

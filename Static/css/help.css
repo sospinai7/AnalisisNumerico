@@ -1,0 +1,74 @@
+.containerhelp {
+    background-image: url("https://c.tenor.com/l-PbZelgds0AAAAC/favorite-facts.gif");
+    background-size: cover;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  .container_info{
+      width: 100%;
+      color: white;
+      font-family: verdana;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      border: 1px solid #333;
+  }
+  
+  .container_info:hover{
+  
+      width: 100%;
+      font-family: verdana;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      border: 1px solid #333;
+      background-color: #04AA6D;
+      transition-duration: 1s;
+  }
+  
+  .container_vi{
+      color: white;
+      width: 100%;
+      font-family: verdana;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      border: 1px solid #333;
+  }
+  
+  .container_vi:hover{
+  
+      width: 100%;
+      font-family: verdana;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      border: 1px solid #333;
+      background-color: #04AA6D;
+      transition-duration: 1s;
+  }
+  
+  
+  
+  
+  
+  .video{
+  
+      margin-left: auto;
+      margin-right: auto;
+  
+  }
+  
+  .usermanual{
+  
+      margin.margin-left: 50%;
+  }
+  
+  
+  .pdf{
+      width: 800px;
+      height: 600px;
+      margin-left: auto;
+      margin-right: auto;
+  }

@@ -1,0 +1,113 @@
+{% extends 'layout.html'%}
+{% block content %}
+<div class="container" style="text-align: center;">
+  <div class="well well-lg">
+    <style>
+      .container {
+        width: 100%
+      }
+
+      .col1 {
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        margin-left: 0px;
+      }
+
+      .col2 {
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        color: #000000;
+        font-family: Helvetica, 'Open Sans', Arial, sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+      }
+    </style>
+    <div>
+      <div>
+        <h1 class="text-center" style="font-size: 200%;"> {{ data['title'] }} </h1>
+        <details>
+          <summary>Help?</summary>
+          X vector or Y vector can´t contain a repeat value.
+        </details>
+        <br>
+        {% if data['message'] != '' %}
+        <h3 style="color: red;">{{ data['message'] }}</h3>
+        {% endif %}
+      </div>
+      <div class="container" style="text-align: center;">
+        <a href="{{ url_for('urrego.lagrange_route', array = 4) }}"><button type="button"
+            class="button button3 btn btn-primary"><i class="fa fa-arrow-left"></i> Lagrange</button></a>
+
+        <a href="{{ url_for('urrego.spline_square_route', array = 4) }}"><button type="button"
+            class="button button1 btn btn-primary">Spline (Square) <i
+              class="fa fa-arrow-right"></i></button></a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <button type="button" class="button button4 btn btn-primary">
+    <a style="text-decoration: none; color: #000000"
+      href="{{url_for('urrego.vandermonde_route', array = data['array_len'] + 1)}}">Increase number of expressions to
+      evaluate</a>
+  </button>
+  <button type="button" class="button button4 btn btn-primary">
+    <a style="text-decoration: none; color: #000000;"
+      href="{{url_for('urrego.vandermonde_route', array = data['array_len'] - 1)}}">Decrease number of expressions to
+      evaluate</a>
+  </button>
+  <form id="inputField" role="form" method='POST'>
+    <h2>A:</h2>
+
+    <table>
+      <tr>
+
+        X:
+
+        {% for n in range(data['array_len']) %}
+
+        <input type="number" name="field0{{ n }}" size="1" step="any" style="width: 8%;"
+          value="{{ range(-51, 51) | random }}">
+
+        {% endfor %}
+      </tr>
+      <br>
+      <tr>
+
+        Y:
+
+        {% for n in range(data['array_len']) %}
+
+        <input type="number" name="field1{{ n }}" size="1" step="any" style="width: 8%;"
+          value="{{ range(-51, 51) | random }}">
+
+        {% endfor %}
+      </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <input type="submit" value="calculate" name="calculate" class="btn btn-info">
+  </form>
+<hr>  
+  <div id="resultField">
+    {% for line in data['summary'] %}
+    <pre>
+{{ line }}
+    </pre>
+    {% endfor %}
+  </div>
+  <br>
+  
+
+</div>
+</div>
+{% endblock %}

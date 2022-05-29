@@ -1,0 +1,207 @@
+.conth{
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+    background-color: rgb(191, 233, 7);
+    border-bottom: 2px solid rgb(51, 49, 50);
+    box-shadow: rgb(51 49 50 / 8%) 0px 10px 20px, rgb(51 49 50 / 6%) 0px 3px 6px;
+}
+
+.head_nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 10px;
+    float: right;
+    font-weight: 700;
+}
+
+#headp {    
+    display: inline;
+    color: white;
+    text-align: right;
+    padding: 16px;
+    text-decoration: none;
+}
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+
+}
+a:active{
+    text-decoration: none;
+
+}
+.title{
+    text-align: center;
+    font-size: 80px;
+    margin: 10px;
+}
+
+.expl{
+    font-size: 23px;
+    font-style: italic;
+    height: 55px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#madeby{
+    font-style: normal;
+    position: absolute;
+    bottom: 220px;
+}
+#helping{
+    font-style: normal;
+}
+
+#students{
+    text-decoration: none;
+    list-style-type: none;
+}
+.barnacle{
+    margin: 5px;
+}
+img {
+    width: 80%;
+}
+.parameters{
+    text-align: center;
+    font-weight: 1000;
+    height: fit-content;
+}
+.flex-container{
+    margin-top: 25px;
+    display: flex;
+}
+.functionbig{
+    width: 250px;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    align-items: center;
+}
+
+.parameters{
+    padding-bottom: 0;
+    text-align:center;
+}
+
+.functionn{
+    display: grid;
+    width: 240px;
+    height: 220px;
+    border: 2px solid  black;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 0;
+}
+
+form{
+    margin:0px auto;
+    grid-template-columns: 2;
+}
+
+
+label{
+    margin:0px auto;
+    display: block;
+}
+
+.titlein{
+    text-align:center;
+}
+
+.graph{
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    margin-left: 400px;
+    margin-bottom: 50%;
+    margin-top: 0%;
+    display: block;
+    float:left;
+}
+
+#plot{
+    margin-top: 20px;
+    text-align: center;
+}
+
+#svg{
+    width:500px;
+    height:500px; 
+    border: 1px solid black;
+    margin: 10%;
+    margin:0px auto;
+    height: fit-content;
+    width: fit-content;
+}
+.row {
+    display: flex;
+    position: relative;
+}
+
+.column {
+    padding: 20px;
+}
+
+.left {
+    flex: 1;
+}
+
+.mid {
+    flex:3;
+}
+
+.right{
+    flex:2;
+}
+
+#xmin{
+    display: grid;
+    text-align: center;
+    margin-left: 35px;
+}
+
+#xmax{
+    display: grid;
+    text-align: center;
+    margin-left: 35px;
+}
+.details{
+    height: fit-content;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+#students{
+    text-align: center;
+}
+
+.lineal input{
+  width: 10%;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+.onevar input{
+  width: 80%;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+summary {
+    padding: 4px;
+    width: 200px;
+    background-color: #eeeeee;
+    border: none;
+    box-shadow: 1px 1px 2px #bbbbbb;
+    cursor: pointer;
+}

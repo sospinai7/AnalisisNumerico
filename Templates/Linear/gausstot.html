@@ -1,0 +1,60 @@
+{% extends 'layout.html'%}
+{% block content %}
+<div class="container">
+  <div class="well well-lg row">
+    <div class="column left">
+    <h1 class="text-center">Gaussian elimination with total Pivot</h1>
+    <br>
+    <div class="container">
+        <a href="{{ url_for('alzate.gausspar_route', array = 4) }}"><button type="button"
+            class="button button3 btn btn-primary"><i class="fa fa-arrow-left"></i> Gausspar</button></a>
+
+        <a href="{{ url_for('alzate.lusimpl_route', array = 4) }}"><button type="button"
+            class="button button1 btn btn-primary">LU simple <i
+              class="fa fa-arrow-right"></i></button></a>
+    </div>
+    <form id="inputField" role="form" method='POST' class="lineal">
+    <h2>Size: {{ data['matrix_size'] }}</h2>
+    <button><a href="{{ url_for('alzate.gausstot_route', array = data['matrix_size'] + 1) }}">Increase</a></button>
+    <br>
+    <button><a href="{{ url_for('alzate.gausstot_route', array = data['matrix_size'] - 1) }}">Decrease</a></button>
+    <h2>A:</h2>
+      {% for row in range(data['matrix_size'])%}
+          {% for col in range(data['matrix_size'])%}
+          <input type="number" name="field{{row}}{{col}}" size="3" step="any" value="{{ range(-51, 51) | random }}">
+          {% endfor %}
+          <br>
+      {% endfor %}
+    <h2>b:</h2>
+      {% for index in range(data['matrix_size'])%}
+          <input type="number" name="fieldb{{index}}" size="3" step="any" value="{{ range(-51, 51) | random }}">
+      {% endfor %}
+      <br>
+      <br>
+      <input type="submit" value="calculate" name="calculate" class="btn btn-info">
+    </form>
+    <br>
+    <details>
+      <summary>Help?</summary>
+      <pre>
+ - The input in the methods help you to be sure in the dimension of the matrix.
+
+ - The determinant of the matrix cannot be 0.
+
+ - The matrix cannot have a 0 on the diagonal, although the method is made in such a way that it does not stop.
+      </pre>
+    </details> 
+    </div>
+    <div class="column right">
+    <div id="resultField">
+        <pre>
+            {% for line in stdout %}
+                {{ line }}
+                <br>
+            {% endfor %}
+            </pre>
+    </div>
+    <div>
+  </div>
+</div>
+{% endblock %}

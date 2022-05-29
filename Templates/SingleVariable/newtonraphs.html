@@ -1,0 +1,66 @@
+{% extends 'layout.html'%}
+{% block content %}
+<div class="container">
+  <div class="well well-lg row">
+      <div class="column left">
+    <h1 class="text-center">Newton - Raphson Method</h1>
+    <form id="inputField" role="form" method='POST' class="onevar">
+    <h2>Function</h2>
+      <input type="text" name="function" step="any">
+      <br>
+    <h2>Function's Derivative</h2>
+      <input type="text" name="fdx" step="any">
+      <br>
+    <h2>Initial value x0</h2>
+      <input type="number" name="xini" size="3" step="any">
+      <br>
+     <h2>Tol</h2>
+      <input type="number" name="tol" size="3" step="any">
+      <br>
+      <h2>Iteration cap.</h2>
+     <input type="number" name="nmax" size="3" step="any">
+      <br>
+      <br>
+      <input type="submit" onclick="window.location.href='{{ url_for( 'alejandro.incsearch_route') }}" value="calculate" name="calculate" class="btn btn-info">
+    </form>
+          <br>
+          <details>
+          <summary>Help?</summary>
+ - There cannot be any discontinuity in the functions, and they must be differentiable.
+<br>
+ - A good initial value, is key for the method. (Try to close in on the root)
+<br>
+ - Tolerance must be greater than 0.
+<br>
+ - The iteration must be positive.
+<br>
+ - CAREFUL: If the function's derivative approaches zero, the method may be inefficient as it is possible to be a case of multiple root.
+        </details>
+      </div>
+    <div id="resultField" class="column mid">
+            <br>
+            <br>
+        <pre>
+            {% for line in stdout %}
+                    {{ line }}
+                {% endfor %}
+        </pre>
+    </div>
+  <div class="column right">
+    <h1>Other One-Variable Methods</h1>
+    <a href="{{ url_for('alejandro.incsearch_route') }}"><button type="button" class="button button2 btn btn-primary">Incremental Search</button></a>
+    <br>
+    <a href="{{ url_for('alejandro.bisection_route') }}"><button type="button" class="button button5 btn btn-primary">Bisection</button></a>
+    <br>
+    <a href="{{ url_for('alejandro.falsepos_route') }}"><button type="button" class="button button3 btn btn-primary">False position</button></a>
+    <br>
+    <a href="{{ url_for('alejandro.fixedpoint_route') }}"><button type="button" class="button button1 btn btn-primary">Fixed Point</button></a>
+    <br>
+    <a href="{{ url_for('alejandro.secant_route') }}"><button type="button" class="button button1 btn btn-primary">Secant method</button></a>
+    <br>
+    <a href="{{ url_for('alejandro.multiroots_route') }}"><button type="button" class="button button2 btn btn-primary">Multi-Roots method</button></a>
+    <br>
+  </div>
+  </div>
+</div>
+{% endblock %}

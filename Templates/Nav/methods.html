@@ -1,0 +1,125 @@
+{% extends 'layout.html'%}
+{% block content %}
+<style>
+    .button {
+        background-color: #4CAF50;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .button1 {
+        background-color: white;
+        color: black;
+        border: 2px solid #4CAF50;
+    }
+
+    .button1:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .button2 {
+        background-color: white;
+        color: black;
+        border: 2px solid #008CBA;
+    }
+
+    .button2:hover {
+        background-color: #008CBA;
+        color: white;
+    }
+
+    .button3 {
+        background-color: white;
+        color: black;
+        border: 2px solid #f44336;
+    }
+
+    .button3:hover {
+        background-color: #f44336;
+        color: white;
+    }
+
+    .button4 {
+        background-color: white;
+        color: black;
+        border: 2px solid #e7e7e7;
+    }
+
+    .button4:hover {
+        background-color: #e7e7e7;
+    }
+
+    .button5 {
+        background-color: white;
+        color: black;
+        border: 2px solid #555555;
+    }
+
+    .button5:hover {
+        background-color: #555555;
+        color: white;
+    }
+</style>
+
+</style>
+<div style="text-align: center;">
+    <h1>Methods to solve numerical problems</h1>
+    <p>24 Methods that will solve complex numerical problems</p>
+    <h2>Solution to systems by graphing</h2>
+    <a href="{{ url_for('tali.graph') }}"><button type="button" class="button button1 btn btn-primary">Function Plotter</button></a>
+    <h2>Solving equations of one variable</h2>
+    <a href="{{ url_for('alejandro.incsearch_route') }}"><button type="button" class="button button2 btn btn-primary">Incremental
+            Search</button></a>
+    <a href="{{ url_for('alejandro.bisection_route') }}"><button type="button"
+            class="button button5 btn btn-primary">Bisection</button></a>
+    <a href="{{ url_for('alejandro.falsepos_route') }}"><button type="button" class="button button3 btn btn-primary">False
+            position</button></a>
+    <a href="{{ url_for('alejandro.fixedpoint_route') }}"><button type="button" class="button button1 btn btn-primary">Fixed
+            Point</button></a>
+    <a href="{{ url_for('alejandro.newtonraphs_route') }}"><button type="button" class="button button5 btn btn-primary">Newton-Raphson
+            method</button></a>
+    <a href="{{ url_for('alejandro.secant_route') }}"><button type="button" class="button button1 btn btn-primary">Secant
+            method</button></a>
+    <a href="{{ url_for('alejandro.multiroots_route') }}"><button type="button" class="button button2 btn btn-primary">Multiple
+            method</button></a>
+    <h2>Solution to system equations</h2>
+        <a href="{{ url_for('alzate.gausspl_route', array = 4) }}"><button type="button" class="button button1 btn btn-primary">Gausspl</button></a>
+        <a href="{{ url_for('alzate.gausspar_route', array = 4) }}"><button type="button" class=" button button2 btn btn-primary">Gausspar</button></a>
+        <a href="{{ url_for('alzate.gausstot_route', array = 4) }}"><button type="button" class="button button3 btn btn-primary">Gausstot</button></a>
+        <a href="{{ url_for('alzate.lusimpl_route', array = 4) }}"><button type="button" class="button button5 btn btn-primary">LU simple</button></a>
+        <a href="{{ url_for('alzate.lupar_route', array = 4) }}"><button type="button" class="button button1 btn btn-primary">LU par</button></a>
+        <a href="{{ url_for('alzate.cholesky_route', array = 4) }}"><button type="button" class="button button2 btn btn-primary">Cholesky</button></a>
+        <a href="{{ url_for('alzate.doolittle_route', array = 4) }}"><button type="button" class="button button3 btn btn-primary">Doolittle</button></a>
+        <a href="{{ url_for('alzate.crout_route', array = 4) }}"><button type="button" class="button button5 btn btn-primary">Crout</button></a>
+        <a href="{{ url_for('alzate.jacobi_route', array = 4) }}"><button type="button" class="button button1 btn btn-primary">Jacobi</button></a>
+        <a href="{{ url_for('alzate.gseidel_route', array = 4) }}"><button type="button" class="button button2 btn btn-primary">Gauss - Seidel</button></a>
+        <a href="{{ url_for('alzate.sor_route', array = 4) }}"><button type="button" class="button button3 btn btn-primary">SOR</button></a>
+
+    <br><br>
+    <h2>Interpolation</h2>
+    <a href="{{ url_for('urrego.vandermonde_route', array = 4) }}"><button type="button"
+            class="button button3 btn btn-primary">Vandermonde</button></a>
+    <a href="{{ url_for('urrego.newton_interpolation_route', array = 4) }}"><button type="button"
+            class="button button1 btn btn-primary">Newton (Divided difference method)</button></a>
+    <a href="{{ url_for('urrego.lagrange_route', array = 4) }}"><button type="button"
+            class="button button5 btn btn-primary">Lagrange</button></a>
+    <a href="{{ url_for('urrego.spline_linear_route', array = 4) }}"><button type="button"
+            class="button button1 btn btn-primary">Spline (Linear)</button></a>
+    <a href="{{ url_for('urrego.spline_square_route', array = 4) }}"><button type="button"
+            class="button button2 btn btn-primary">Spline (Square)</button></a>
+    <a href="{{ url_for('urrego.spline_cubic_route', array = 4) }}"><button type="button" class="button button2 btn btn-primary">Spline
+            (Cubic)</button></a>
+    
+</div>
+<br>
+{% endblock %}

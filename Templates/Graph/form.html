@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" tybe="text/css" href="{{url_for('static', filename='css/graphf.css')}}">
+    <title>Graph</title>
+</head>
+
+<body>
+	<style>
+        body {margin: 0;}
+        
+        ul.topnav {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        ul.topnav li {float: left;}
+        
+        ul.topnav li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        ul.topnav li a:hover:not(.active) {background-color: #111;}
+        
+        ul.topnav li a.active {background-color: #04AA6D;}
+        
+        ul.topnav li.right {float: right;}
+        
+        @media screen and (max-width: 600px) {
+          ul.topnav li.right, 
+          ul.topnav li {float: none;}
+        }
+        </style>
+        <ul class="topnav">
+          <li><a class="active" href="{{ url_for('hello') }}">Main page</a></li>
+          <li><a href="{{ url_for('methods_route') }}">Methods</a></li>
+          <li><a href="{{ url_for('about_us_route') }}">About Us</a></li>
+          <li class="right"><a href="{{ url_for('help_route') }}">Help</a></li>
+        </ul>
+    <div class="graph">
+        <div class="title_graph">
+            Function graph
+        </div>
+        <div class="functionmade">
+        	the function that is being showed is <mark>{{fx}}</mark>
+        </div>
+        <div class="function_plot">
+            <svg vertion="1.1" style="background-color:#fff" id="svg" xmlns="http://www.w3.org/2000/svg"> </svg>
+            <script type="text/javascript" src="{{url_for('static', filename='js/plot.js')}}"></script>
+            <script>
+
+                setCanvasSize(960, 500)
+                var opts = { doEqualizeAxes: true, doDrawAxes: true }
+                drawFn({{a}},{{b}}, -5, 5, opts, function (x) {
+                    return {{ fx }}
+                })
+            </script>
+
+        </div>
+    </div>
+    <div class="back">
+        <label>
+           <a href="{{url_for('hello')}}"> <button type="button" class="goback">GO BACK</button> </a>        
+        </label>
+    </div>
+</body>
+
+</html>

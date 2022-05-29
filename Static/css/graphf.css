@@ -1,0 +1,71 @@
+.title_graph{
+    width: 100px;
+    height: 15px;
+    position: relative;
+    margin-left: auto; /* 15px padding + 7px border ribbon shadow*/
+    margin-right: auto;
+    padding: 15px;
+    background: #e5e5e5;
+    background: linear-gradient(#f5f5f5, #e5e5e5);
+    box-shadow: 0 -1px 0 rgba(255,255,255,.8) inset;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.functionmade{
+  position: relative;
+    border-color: #eee;
+    border-style: solid;
+    border-width: 5px 5px 5px 0;
+    background: #fff;
+    margin: 0 0 15px -15px;
+    padding: 5px 15px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    text-align: center;
+}
+
+mark{
+    background-color: yellow;
+    color: black;
+}
+
+
+.function_plot{
+        width: 960px;
+        height: 500px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 50px;
+        display: block;
+}
+
+
+
+
+.goback{
+	background-color: #4CAF50;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+
+}
+
+.back{
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+.goback:hover{
+        background-color: #f44336;
+        color: white;
+    }
+
+
