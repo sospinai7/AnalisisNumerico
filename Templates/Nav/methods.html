@@ -76,38 +76,38 @@
     <h1>Methods to solve numerical problems</h1>
     <p>24 Methods that will solve complex numerical problems</p>
     <h2>Solution to systems by graphing</h2>
-    <a href="{{ url_for('tali.graph') }}"><button type="button" class="button button1 btn btn-primary">Function Plotter</button></a>
+    <!-- <a href="{{ url_for('tali.graph') }}"><button type="button" class="button button1 btn btn-primary">Function Plotter</button></a> -->
     <h2>Solving equations of one variable</h2>
-    <a href="{{ url_for('alejandro.incsearch_route') }}"><button type="button" class="button button2 btn btn-primary">Incremental
+    <a href="{{ url_for('santiago.incsearch_route') }}"><button type="button" class="button button2 btn btn-primary">Incremental
             Search</button></a>
-    <a href="{{ url_for('alejandro.bisection_route') }}"><button type="button"
+    <a href="{{ url_for('santiago.bisection_route') }}"><button type="button"
             class="button button5 btn btn-primary">Bisection</button></a>
-    <a href="{{ url_for('alejandro.falsepos_route') }}"><button type="button" class="button button3 btn btn-primary">False
+    <a href="{{ url_for('santiago.falsepos_route') }}"><button type="button" class="button button3 btn btn-primary">False
             position</button></a>
-    <a href="{{ url_for('alejandro.fixedpoint_route') }}"><button type="button" class="button button1 btn btn-primary">Fixed
+    <a href="{{ url_for('santiago.fixedpoint_route') }}"><button type="button" class="button button1 btn btn-primary">Fixed
             Point</button></a>
-    <a href="{{ url_for('alejandro.newtonraphs_route') }}"><button type="button" class="button button5 btn btn-primary">Newton-Raphson
+    <a href="{{ url_for('santiago.newtonraphs_route') }}"><button type="button" class="button button5 btn btn-primary">Newton-Raphson
             method</button></a>
-    <a href="{{ url_for('alejandro.secant_route') }}"><button type="button" class="button button1 btn btn-primary">Secant
+    <a href="{{ url_for('santiago.secant_route') }}"><button type="button" class="button button1 btn btn-primary">Secant
             method</button></a>
-    <a href="{{ url_for('alejandro.multiroots_route') }}"><button type="button" class="button button2 btn btn-primary">Multiple
+    <a href="{{ url_for('santiago.multiroots_route') }}"><button type="button" class="button button2 btn btn-primary">Multiple
             method</button></a>
     <h2>Solution to system equations</h2>
-        <a href="{{ url_for('alzate.gausspl_route', array = 4) }}"><button type="button" class="button button1 btn btn-primary">Gausspl</button></a>
-        <a href="{{ url_for('alzate.gausspar_route', array = 4) }}"><button type="button" class=" button button2 btn btn-primary">Gausspar</button></a>
-        <a href="{{ url_for('alzate.gausstot_route', array = 4) }}"><button type="button" class="button button3 btn btn-primary">Gausstot</button></a>
-        <a href="{{ url_for('alzate.lusimpl_route', array = 4) }}"><button type="button" class="button button5 btn btn-primary">LU simple</button></a>
-        <a href="{{ url_for('alzate.lupar_route', array = 4) }}"><button type="button" class="button button1 btn btn-primary">LU par</button></a>
-        <a href="{{ url_for('alzate.cholesky_route', array = 4) }}"><button type="button" class="button button2 btn btn-primary">Cholesky</button></a>
-        <a href="{{ url_for('alzate.doolittle_route', array = 4) }}"><button type="button" class="button button3 btn btn-primary">Doolittle</button></a>
-        <a href="{{ url_for('alzate.crout_route', array = 4) }}"><button type="button" class="button button5 btn btn-primary">Crout</button></a>
-        <a href="{{ url_for('alzate.jacobi_route', array = 4) }}"><button type="button" class="button button1 btn btn-primary">Jacobi</button></a>
-        <a href="{{ url_for('alzate.gseidel_route', array = 4) }}"><button type="button" class="button button2 btn btn-primary">Gauss - Seidel</button></a>
-        <a href="{{ url_for('alzate.sor_route', array = 4) }}"><button type="button" class="button button3 btn btn-primary">SOR</button></a>
+        <a href="{{ url_for('santiago.gausspl_route', array = 4) }}"><button type="button" class="button button1 btn btn-primary">Gausspl</button></a>
+        <a href="{{ url_for('santiago.gausspar_route', array = 4) }}"><button type="button" class=" button button2 btn btn-primary">Gausspar</button></a>
+        <a href="{{ url_for('santiago.gausstot_route', array = 4) }}"><button type="button" class="button button3 btn btn-primary">Gausstot</button></a>
+        <a href="{{ url_for('santiago.lusimpl_route', array = 4) }}"><button type="button" class="button button5 btn btn-primary">LU simple</button></a>
+        <a href="{{ url_for('santiago.lupar_route', array = 4) }}"><button type="button" class="button button1 btn btn-primary">LU par</button></a>
+        <a href="{{ url_for('santiago.cholesky_route', array = 4) }}"><button type="button" class="button button2 btn btn-primary">Cholesky</button></a>
+        <a href="{{ url_for('santiago.doolittle_route', array = 4) }}"><button type="button" class="button button3 btn btn-primary">Doolittle</button></a>
+        <a href="{{ url_for('santiago.crout_route', array = 4) }}"><button type="button" class="button button5 btn btn-primary">Crout</button></a>
+        <a href="{{ url_for('santiago.jacobi_route', array = 4) }}"><button type="button" class="button button1 btn btn-primary">Jacobi</button></a>
+        <a href="{{ url_for('santiago.gseidel_route', array = 4) }}"><button type="button" class="button button2 btn btn-primary">Gauss - Seidel</button></a>
+        <a href="{{ url_for('santiago.sor_route', array = 4) }}"><button type="button" class="button button3 btn btn-primary">SOR</button></a>
 
     <br><br>
     <h2>Interpolation</h2>
-    <a href="{{ url_for('urrego.vandermonde_route', array = 4) }}"><button type="button"
+    <!-- <a href="{{ url_for('urrego.vandermonde_route', array = 4) }}"><button type="button"
             class="button button3 btn btn-primary">Vandermonde</button></a>
     <a href="{{ url_for('urrego.newton_interpolation_route', array = 4) }}"><button type="button"
             class="button button1 btn btn-primary">Newton (Divided difference method)</button></a>
@@ -118,7 +118,7 @@
     <a href="{{ url_for('urrego.spline_square_route', array = 4) }}"><button type="button"
             class="button button2 btn btn-primary">Spline (Square)</button></a>
     <a href="{{ url_for('urrego.spline_cubic_route', array = 4) }}"><button type="button" class="button button2 btn btn-primary">Spline
-            (Cubic)</button></a>
+            (Cubic)</button></a> -->
     
 </div>
 <br>

@@ -1,0 +1,18 @@
+Divided Differences 
+
+read vector X, vector Y 
+check if they have the same size. 
+function divdiff: 
+    length = lenght(X)
+    D = zeros(n) 
+    D[column i] = Y(transposed) 
+	
+    for i=2 to n: 
+	temporal = D[column i, below the diagonal] 
+	temp1 = difference between adjacent vector values for temporal
+	temp2 = X(from i to n) - X(from the first value to n-i+1)
+	D[column i below the diagonal] = temp1./temp2
+    end for
+    coef = diag(D)'   
+    return coef, D
+end function. 

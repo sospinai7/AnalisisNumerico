@@ -1,0 +1,16 @@
+Vandermonde 
+
+read vector X, vector Y
+check if both vectors are the same size. 
+function vandermonde:	# (Must be same size) 
+    length = length(X)
+    A = squared matrix of zeros
+    a = vector size(length)
+    for i=0 to length do:
+	A[column i] = (X.^(length-i))	# Assign to matrix A, column i the values in X risen to (length-i)
+    end for 
+    coeficient = A/Y
+    return coeficient, A. 
+end function. 
+
+

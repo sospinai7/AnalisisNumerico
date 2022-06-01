@@ -6,18 +6,18 @@
     <h1 class="text-center">Direct Factorization LU - simple</h1>
     <br>
     <div class="container">
-        <a href="{{ url_for('alzate.gausstot_route', array = 4) }}"><button type="button"
+        <a href="{{ url_for('santiago.gausstot_route', array = 4) }}"><button type="button"
             class="button button3 btn btn-primary"><i class="fa fa-arrow-left"></i> Gausstot</button></a>
 
-        <a href="{{ url_for('alzate.lupar_route', array = 4) }}"><button type="button"
+        <a href="{{ url_for('santiago.lupar_route', array = 4) }}"><button type="button"
             class="button button1 btn btn-primary">LU par <i
               class="fa fa-arrow-right"></i></button></a>
     </div>
     <form id="inputField" role="form" method='POST' class="lineal">
     <h2>Size: {{ data['matrix_size'] }}</h2>
-    <button><a href="{{ url_for('alzate.lusimpl_route', array = data['matrix_size'] + 1) }}">Increase</a></button>
+    <button><a href="{{ url_for('santiago.lusimpl_route', array = data['matrix_size'] + 1) }}">Increase</a></button>
     <br>
-    <button><a href="{{ url_for('alzate.lusimpl_route', array = data['matrix_size'] - 1) }}">Decrease</a></button>
+    <button><a href="{{ url_for('santiago.lusimpl_route', array = data['matrix_size'] - 1) }}">Decrease</a></button>
     <h2>A:</h2>
       {% for row in range(data['matrix_size'])%}
           {% for col in range(data['matrix_size'])%}
