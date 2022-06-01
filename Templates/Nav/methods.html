@@ -2,6 +2,7 @@
 {% block content %}
 <style>
     .button {
+        border-radius: 40%;
         background-color: #4CAF50;
         /* Green */
         border: none;
@@ -17,13 +18,14 @@
     }
 
     .button1 {
-        background-color: white;
+        background-color: #4CAF50;
         color: black;
         border: 2px solid #4CAF50;
     }
 
     .button1:hover {
-        background-color: #4CAF50;
+        background-color: #306a31;
+        border: 2px solid #306a31;
         color: white;
     }
 
@@ -69,12 +71,22 @@
         background-color: #555555;
         color: white;
     }
+
+    .methods{
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: normal;
+        font-size: 18px;
+    }
+
+    .text {
+        font-size: 15px;
+    }
 </style>
 
 </style>
-<div style="text-align: center;">
+<div class="methods"  style="text-align: center;">
     <h1>Methods to solve numerical problems</h1>
-    <p>24 Methods that will solve complex numerical problems</p>
+    <p class="text">Metodos para resolver problemas numericos</p>
     <h2>Solution to systems by graphing</h2>
     <!-- <a href="{{ url_for('tali.graph') }}"><button type="button" class="button button1 btn btn-primary">Function Plotter</button></a> -->
     <h2>Solving equations of one variable</h2>
@@ -86,7 +98,7 @@
             position</button></a>
     <a href="{{ url_for('santiago.fixedpoint_route') }}"><button type="button" class="button button1 btn btn-primary">Fixed
             Point</button></a>
-    <a href="{{ url_for('santiago.newtonraphs_route') }}"><button type="button" class="button button5 btn btn-primary">Newton-Raphson
+    <a href="{{ url_for('santiago.newtonraphs_route') }}"><button type="button" class="button button5 btn btn-primary">Newton
             method</button></a>
     <a href="{{ url_for('santiago.secant_route') }}"><button type="button" class="button button1 btn btn-primary">Secant
             method</button></a>
