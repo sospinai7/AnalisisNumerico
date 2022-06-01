@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap">
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/index.css") }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     <title>
         Numeric analysis Final project
     </title>
@@ -20,11 +27,13 @@
         body {margin: 0;}
         
         ul.topnav {
+          font-family: 'Ubuntu', sans-serif;   
+          font-size: 80%;
           list-style-type: none;
           margin: 0;
           padding: 0;
           overflow: hidden;
-          background-color: #333;
+          background-color: rgb(0, 38, 59);
         }
         
         ul.topnav li {float: left;}
@@ -37,9 +46,7 @@
           text-decoration: none;
         }
         
-        ul.topnav li a:hover:not(.active) {background-color: #111;}
-        
-        ul.topnav li a.active {background-color: #04AA6D;}
+        ul.topnav li a:hover {background-color: white; color: rgb(0, 38, 59);}
         
         ul.topnav li.right {float: right;}
         
@@ -126,6 +133,7 @@
         <ul class="topnav">
           <li><a class="active" href="{{ url_for('hello') }}">Main page</a></li>
           <li><a href="{{ url_for('methods_route') }}">Methods</a></li>
+          <li><a href="{{ url_for('help_route') }}">Help</a></li>
         </ul>
     {% block content %}
     {% endblock %}

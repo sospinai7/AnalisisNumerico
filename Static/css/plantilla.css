@@ -40,20 +40,17 @@ a:active{
 }
 
 .expl{
-    font-size: 23px;
-    font-style: italic;
+    font-size: 50px;
     height: 55px;
-    margin-left: 20%;
-    margin-right: 20%;
 }
-#madeby{
-    font-style: normal;
+/* #madeby{
+    font-style: bolder;
     position: absolute;
     bottom: 220px;
 }
 #helping{
     font-style: normal;
-}
+} */
 
 #students{
     text-decoration: none;
