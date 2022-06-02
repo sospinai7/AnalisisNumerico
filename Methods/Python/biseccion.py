@@ -17,7 +17,7 @@ def biseccion(func, a, b, Nmax, tol):
     while (count < Nmax) and (E > tol):
         print("|{i:3g}| {a:.16f} | {xm:.16f} | {b:.16f} | {fpm:.16f} | {E:.1E} |".format(i=count, a=a, xm=pm, b=b, fpm=fpm, E=E))
         if (fa * fpm) < 0:
-            b = pm
+            b = pm          #primera mitad
             fb = fpm
         else:
             a = pm
@@ -25,7 +25,7 @@ def biseccion(func, a, b, Nmax, tol):
         p0 = pm
         pm = (a+b)/2
         fpm = func(pm)
-        E = abs(p0-pm)
+        E = abs(p0-pm) #punto final
 
         count += 1
     if count == max or E > tol:

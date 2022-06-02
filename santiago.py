@@ -22,7 +22,6 @@ from Methods.Python.doolittle import doolittle
 from Methods.Python.cholesky import cholesky
 from Methods.Python.jacobi import jacobi
 from Methods.Python.gseidel import gseidel
-from Methods.Python.sor import sor
 import numpy as np
 
 santiago = Blueprint('santiago', __name__,
@@ -494,37 +493,6 @@ def gseidel_route(array):
     result_stdout = stdout.getvalue()
     result_stdout = result_stdout.split('\n')
     return render_template('Linear/gseidel.html', x = x, stdout = result_stdout, data = data)
-
-@santiago.route('/methods/sor/<int:array>', methods=['GET', 'POST'])
-def sor_route(array):
-    data = {}
-    data['matrix_size'] = array
-    A = np.zeros((array, array))
-    b = np.zeros(array)
-    x0 = np.zeros(array)
-    tol = 0
-    nmax = 0
-    w = 0
-    if request.method == 'POST':
-        nmax = float(request.form["fieldNmax"])
-        tol = float(request.form["fieldTol"])
-        w = float(request.form["fieldw"])
-        for i in range(array):
-            for j in range(array):
-                A[i][j] =  float(request.form["field"+str(i)+str(j)])
-
-        for i in range(array):
-            b[i] = float(request.form["fieldb"+str(i)])
-
-        for i in range(array):
-            x0[i] = float(request.form["fieldx"+str(i)])
-
-    stdout  = StringIO()
-    sys.stdout = stdout # Output will be recorded
-    x = sor(A, b, x0, w, tol, nmax)
-    result_stdout = stdout.getvalue()
-    result_stdout = result_stdout.split('\n')
-    return render_template('Linear/sor.html', x = x, stdout = result_stdout, data = data)
 
 def matrix_str(A):
     mstr = ''
