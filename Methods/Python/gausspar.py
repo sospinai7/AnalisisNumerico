@@ -1,4 +1,3 @@
-#!/home/salzatec1/miniconda3/bin/python
 
 import numpy as np
 from sustreg import sustreg

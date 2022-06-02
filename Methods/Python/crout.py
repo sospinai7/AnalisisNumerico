@@ -1,4 +1,3 @@
-#!/home/salzatec1/miniconda3/bin/python
 
 from sustreg import sustreg
 from sustprog import sustprog

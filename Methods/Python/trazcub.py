@@ -1,4 +1,4 @@
-#!/home/salzatec1/miniconda3/bin/python
+
 import numpy as np
 from gausstot import gausstot
 from gausspl import gausspl
