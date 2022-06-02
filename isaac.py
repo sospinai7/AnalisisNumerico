@@ -1,4 +1,3 @@
-from crypt import methods
 from flask import Blueprint, render_template, request, abort
 from io import StringIO
 import sys
