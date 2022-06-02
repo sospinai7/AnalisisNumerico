@@ -1,10 +1,9 @@
-#!/home/salzatec1/miniconda3/bin/python
 
 from sympy import *
 import math
 
 def newton(f, df, x0, Nmax, tol):
-    xant = x0;
+    xant = x0
     fant = f(xant)
     dfant = df(xant)
     E = 1000

@@ -13,11 +13,12 @@ def busqueda(func, xin, delta, Nmax):
     fact = func(xact)
     
     i = 1
-    print(" {i:^3}| {a:^20}|{b:^20}".format(i="i",a="xant",b="xact"))
+    print(" {i:^3}| {a:^20}|{b:^20}| {c:^20}".format(i="i",a="xant",b="xact", c="f(xact)"))
     for i in range(1, Nmax):
-        text = '{:3g} | {:.16f} | {:.16f}'
-        print(text.format(i, xant, xact))
+        text = '{:3g} | {:.16f} | {:.16f} | {:.16f}'
+        print(text.format(i, xant, xact, fact))
         if (fant * fact) < 0:
+            print('There is a root between ', fant, 'and', fact)
             break
         else:
             xant = xact

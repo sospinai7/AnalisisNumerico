@@ -1,17 +1,16 @@
-#!/home/salzatec1/miniconda3/bin/python
 
 from sympy import *
 import math
 
 def raicesmlt(f, df, d2f, x0, Nmax, tol):
-    xant = x0;
+    xant = x0
     fant = f(xant)
     dfant = df(xant)
     E = 1000
     i = 0
     print("|{i:^3}|{xi:^16}|{fxm:^20}|{E:^10}|".format(i="i",xi="xi",fxm="f(xi)",E="E"))
     while i < Nmax and E > tol:
-        print("|{i:3g}|{xi:.16f}|{fxm:.16f}|{E:.1E}|".format(i=0, xi=xant, fxm=fant, E=E))
+        print("|{i:3g}|{xi:.16f}|{fxm:.16f}|{E:.1E}|".format(i=i, xi=xant, fxm=fant, E=E))
         if ((df(xant)**2 - fant*d2f(xant))) == 0:
             print("Error: division by zero")
             return

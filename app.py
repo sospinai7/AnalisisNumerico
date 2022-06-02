@@ -4,14 +4,12 @@ import sys
 sys.path.append('Methods/Python')
 
 from santiago import santiago
-from urrego import urrego
-from tali import tali
+from isaac import isaac
 
 
 app = Flask(__name__)
 app.register_blueprint(santiago, url_prefix='/santiago')
-app.register_blueprint(urrego, url_prefix='/urrego')
-app.register_blueprint(tali, url_prefix='/tali')
+app.register_blueprint(isaac, url_prefix='/isaac')
 
 
 @app.route('/')

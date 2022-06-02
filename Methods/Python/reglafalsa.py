@@ -1,4 +1,3 @@
-#!/home/salzatec1/miniconda3/bin/python
 
 import math
 

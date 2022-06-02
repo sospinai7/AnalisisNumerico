@@ -1,4 +1,4 @@
-#!/home/salzatec1/miniconda3/bin/python
+
 import numpy as np
 
 def lagrange(X, Y):
